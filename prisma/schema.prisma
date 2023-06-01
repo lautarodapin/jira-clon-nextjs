@@ -1,0 +1,27 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+    provider        = "prisma-client-js"
+    previewFeatures = ["jsonProtocol"]
+}
+
+datasource db {
+    provider = "sqlite"
+    url      = env("DATABASE_URL")
+}
+
+model KanbanColumn {
+    id      String         @id @default(cuid())
+    name    String         @unique
+    order   Int
+    tickets KanbanTicket[]
+}
+
+model KanbanTicket {
+    id       String       @id @default(cuid())
+    title    String
+    columnId String
+    column   KanbanColumn @relation(fields: [columnId], references: [id])
+    order    Int          @default(0)
+}

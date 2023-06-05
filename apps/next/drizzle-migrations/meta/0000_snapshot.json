@@ -1,7 +1,7 @@
 {
   "version": "5",
   "dialect": "sqlite",
-  "id": "3e6816a8-8563-454f-9372-ab5da1f3deff",
+  "id": "7681928a-01ba-4e92-8a8b-84e735ea7912",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "kanbanColumns": {

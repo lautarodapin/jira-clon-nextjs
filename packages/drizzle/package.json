@@ -1,0 +1,24 @@
+{
+    "name": "@jira-clon/drizzle",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "types": "./index.ts",
+    "scripts": {
+        "drizzle:migrate": "npx ts-node ./migrate.ts",
+        "drizzle:generate": "drizzle-kit generate:sqlite --config ./drizzle.config.ts",
+        "drizzle:up": "drizzle-kit up:sqlite  --config ./drizzle.config.ts",
+        "drizzle:push": "drizzle-kit push:sqlite  --config ./drizzle.config.ts",
+        "drizzle:check": "drizzle-kit check:sqlite  --config ./drizzle.config.ts"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "better-sqlite3": "^8.4.0",
+        "drizzle-orm": "^0.26.0"
+    },
+    "devDependencies": {
+        "drizzle-kit": "0.18.1"
+    }
+}

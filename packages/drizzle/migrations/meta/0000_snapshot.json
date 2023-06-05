@@ -1,0 +1,91 @@
+{
+  "version": "5",
+  "dialect": "sqlite",
+  "id": "035422f9-44ad-4b8f-94ae-2c943ee9ed6e",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "tables": {
+    "drizzle_kanban_columns": {
+      "name": "drizzle_kanban_columns",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "order": {
+          "name": "order",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 0
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {}
+    },
+    "drizzle_kanban_tickets": {
+      "name": "drizzle_kanban_tickets",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "integer",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "name": {
+          "name": "name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "order": {
+          "name": "order",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 0
+        },
+        "column_id": {
+          "name": "column_id",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "drizzle_kanban_tickets_column_id_drizzle_kanban_columns_id_fk": {
+          "name": "drizzle_kanban_tickets_column_id_drizzle_kanban_columns_id_fk",
+          "tableFrom": "drizzle_kanban_tickets",
+          "tableTo": "drizzle_kanban_columns",
+          "columnsFrom": [
+            "column_id"
+          ],
+          "columnsTo": [
+            "id"
+          ]
+        }
+      },
+      "compositePrimaryKeys": {}
+    }
+  },
+  "enums": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  }
+}

@@ -11,6 +11,24 @@
             "persistent": true,
             "cache": false
         },
+        "drizzle:generate": {
+            "cache": false
+        },
+        "drizzle:up": {
+            "cache": false
+        },
+        "drizzle:check": {
+            "cache": false
+        },
+        "drizzle:drop": {
+            "cache": false
+        },
+        "drizzle:push": {
+            "cache": false
+        },
+        "drizzle:migrate": {
+            "cache": false
+        },
         "lint": {}
     },
     "globalDependencies": [

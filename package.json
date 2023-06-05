@@ -1,8 +1,10 @@
 {
     "name": "jira-clon",
+    "private": true,
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
+    "packageManager": "pnpm@8.6.0",
     "scripts": {
         "dev": "turbo dev --parallel"
     },
